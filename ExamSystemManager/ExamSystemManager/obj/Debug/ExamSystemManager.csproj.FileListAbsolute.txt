@@ -1,0 +1,9 @@
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\obj\Debug\ExamSystemManager.csprojResolveAssemblyReference.cache
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.pdb
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.Bussiness.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.Data.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.Bussiness.pdb
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\bin\ExamSystemManager.Data.pdb
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\obj\Debug\ExamSystemManager.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager\obj\Debug\ExamSystemManager.pdb

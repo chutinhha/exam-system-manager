@@ -1,0 +1,37 @@
+/* CSS Document */
+body{margin:0; font-family:Tahoma, Geneva, sans-serif;}
+.wrapper{margin:auto; width:1000px;}
+.banner{height:150px; background:url(../IMG/banner.jpg);}
+#menu{height:40px; background: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffffff), to(#000)); /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffccff), to(#999999));*/}
+#menu ul{list-style:none; margin:0px; padding:0px; margin-left:200px; text-align:center; font-weight:bold;}
+#menu ul li{float:left; font-size:16px; height:33px; padding-top:7px; padding-left:10px; padding-right:10px; position:relative; border-right:1px dotted #000; width:100px;}
+#menu ul li:last-child{border:0px;}
+#menu ul li:hover{ background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CCCCCC), to(#ffffff));}
+#menu ul li a{text-decoration:none; color:#000000;}
+#menu ul li:hover a{color:#0033FF;}
+#menu ul li ul{display:none; position:absolute; top:40px; left:0px;  border-radius:0px 0px 5px 5px; margin:0px; text-align:left;}
+#menu ul li ul li{width:150px; background:#ededed; border-bottom: 1px dotted #000; border-right:0px;}
+#menu ul li ul li:last-child{border-radius:0px 0px 10px 10px; border:0px;}
+#menu ul li ul li:hover {background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#CCCCCC));}
+.conten{height:auto; margin-top:10px;}
+.conten .info{margin:20px 0px; width:200px; float:left;}
+.conten .info table td{height:31px; text-align:center;}
+.container{width:769px; border-left:1px solid #000; float:left; padding-left:30px;}
+.container .title{border-bottom:1px solid #000; height:50px; font-size:25px; margin-bottom:2px; font-weight:bold; color:#0033FF;}
+.text{
+}
+.footer{height:100px; border-top:1px #000 solid; text-align:center; margin-top:10px; float:left; width:1000px;}
+.data{font-size:12px; width:100%; text-align:left;}
+.control {float:left; width:754px; padding: 10px 15px 10px 0px;background: #e7f1ff no-repeat left center; background: -webkit-gradient(radial, center center, 0, center center, 460, from(#e7ffff), to(#e7f1ff)); margin-bottom: 0px;}
+.control a{text-decoration:none; font-size:14px;}
+.control .add{background:url(../IMG/icons/add.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .delete{background:url(../IMG/icons/cross.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .refresh{background:url(../IMG/icons/arrow_refresh.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .back {background:url(../IMG/icons/arrow_undo.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .save {background:url(../IMG/icons/disk.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .changePass {background:url(../IMG/icons/change_password.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.control .postSend {background:url(../IMG/icons/picture_go.png) center left no-repeat;padding:10px 0px 10px 20px;margin:0px 10px 0px 10px;}
+.informasi{border: 1px solid #86afe7; width:707px; background: #e7f1ff url(../IMG/icons/informasi.png) no-repeat left center; float: left; padding: 15px 10px 15px 50px; font-size: 16px; letter-spacing: 1px; margin: 0px 0 10px 0; color: Blue;}
+.sukses {border: 1px solid #cbe0b5; background: #f7ffe8 url(../IMG/icons/sukses.png) no-repeat left center; float: left;width: 707px; padding: 15px 10px 15px 50px;	font-size: 16px; letter-spacing: 1px; margin: 10px 0 10px 0; color:#0099CC;}
+.gagal {border: 1px solid #e78686; background: #ffe1e1 url(../IMG/icons/gagal.png) no-repeat left center; float: left; width: 707px; padding: 15px 10px 15px 50px; font-size: 16px; letter-spacing: 1px; margin: 10px 0 10px 0; color: #e78686; }
+.t-left{padding-left:250px; width:50%; height:30px; font-weight:bold;}

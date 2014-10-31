@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HDS_Test_SystemModelStoreContainer" CdmEntityContainer="ExamSystemManagerDBEntities">
+    <EntitySetMapping Name="HDS_Answer">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Answer">
+        <MappingFragment StoreEntitySet="HDS_Answer">
+          <ScalarProperty Name="Ans_ID" ColumnName="Ans_ID" />
+          <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+          <ScalarProperty Name="Ans_Answer" ColumnName="Ans_Answer" />
+          <ScalarProperty Name="Ans_IsTrue" ColumnName="Ans_IsTrue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_Category">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Category">
+        <MappingFragment StoreEntitySet="HDS_Category">
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="Cat_Name" ColumnName="Cat_Name" />
+          <ScalarProperty Name="Cat_Description" ColumnName="Cat_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_Employee">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Employee">
+        <MappingFragment StoreEntitySet="HDS_Employee">
+          <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_Exam">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Exam">
+        <MappingFragment StoreEntitySet="HDS_Exam">
+          <ScalarProperty Name="Res_rating" ColumnName="Res_rating" />
+          <ScalarProperty Name="Res_Result" ColumnName="Res_Result" />
+          <ScalarProperty Name="Exa_ID" ColumnName="Exa_ID" />
+          <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+          <ScalarProperty Name="Exa_FromDate" ColumnName="Exa_FromDate" />
+          <ScalarProperty Name="Exa_ToDate" ColumnName="Exa_ToDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_ExamDetail">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_ExamDetail">
+        <MappingFragment StoreEntitySet="HDS_ExamDetail">
+          <ScalarProperty Name="Exd_ID" ColumnName="Exd_ID" />
+          <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+          <ScalarProperty Name="Exa_ID" ColumnName="Exa_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_ExamDetailAnswer">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_ExamDetailAnswer">
+        <MappingFragment StoreEntitySet="HDS_ExamDetailAnswer">
+          <ScalarProperty Name="Exda_ID" ColumnName="Exda_ID" />
+          <ScalarProperty Name="Exd_ID" ColumnName="Exd_ID" />
+          <ScalarProperty Name="Exda_Answer" ColumnName="Exda_Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_InitExam">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_InitExam">
+        <MappingFragment StoreEntitySet="HDS_InitExam">
+          <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+          <ScalarProperty Name="Iex_Name" ColumnName="Iex_Name" />
+          <ScalarProperty Name="Iex_Description" ColumnName="Iex_Description" />
+          <ScalarProperty Name="Iex_Date" ColumnName="Iex_Date" />
+          <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="Typ_ID" ColumnName="Typ_ID" />
+          <ScalarProperty Name="Iex_NumQuestion" ColumnName="Iex_NumQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_InitExamDetail">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_InitExamDetail">
+        <MappingFragment StoreEntitySet="HDS_InitExamDetail">
+          <ScalarProperty Name="Iexd_ID" ColumnName="Iexd_ID" />
+          <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+          <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+          <ScalarProperty Name="Iexd_NumQuestion" ColumnName="Iexd_NumQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_Lever">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Lever">
+        <MappingFragment StoreEntitySet="HDS_Lever">
+          <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+          <ScalarProperty Name="Lev_Name" ColumnName="Lev_Name" />
+          <ScalarProperty Name="Lev_Description" ColumnName="Lev_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_Question">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Question">
+        <MappingFragment StoreEntitySet="HDS_Question">
+          <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+          <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+          <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+          <ScalarProperty Name="Typ_ID" ColumnName="Typ_ID" />
+          <ScalarProperty Name="Que_Title" ColumnName="Que_Title" />
+          <ScalarProperty Name="Que_Description" ColumnName="Que_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_StandardRating">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_StandardRating">
+        <MappingFragment StoreEntitySet="HDS_StandardRating">
+          <ScalarProperty Name="Rat_ID" ColumnName="Rat_ID" />
+          <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+          <ScalarProperty Name="Rat_FromMark" ColumnName="Rat_FromMark" />
+          <ScalarProperty Name="Rat_ToMark" ColumnName="Rat_ToMark" />
+          <ScalarProperty Name="Rat_Name" ColumnName="Rat_Name" />
+          <ScalarProperty Name="Rat_Description" ColumnName="Rat_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_TypeQuestion">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_TypeQuestion">
+        <MappingFragment StoreEntitySet="HDS_TypeQuestion">
+          <ScalarProperty Name="typ_ID" ColumnName="typ_ID" />
+          <ScalarProperty Name="Typ_Name" ColumnName="Typ_Name" />
+          <ScalarProperty Name="Typ_Description" ColumnName="Typ_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HDS_User">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_User">
+        <MappingFragment StoreEntitySet="HDS_User">
+          <ScalarProperty Name="Usr_Avata" ColumnName="Usr_Avata" />
+          <ScalarProperty Name="Usr_Role" ColumnName="Usr_Role" />
+          <ScalarProperty Name="Usr_ID" ColumnName="Usr_ID" />
+          <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+          <ScalarProperty Name="Usr_Username" ColumnName="Usr_Username" />
+          <ScalarProperty Name="Usr_Password" ColumnName="Usr_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagram1">
+      <EntityTypeMapping TypeName="HDS_Test_SystemModel.sysdiagram1">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
