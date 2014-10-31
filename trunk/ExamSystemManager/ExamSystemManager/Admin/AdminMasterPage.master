@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="ExamSystemManager.Admin.AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+    <asp:ContentPlaceHolder id=title runat="server">
+    
+    </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>	
+    <script type="text/javascript">
+        //Tai lieu da san sang
+        $(document).ready(function (e) {
+            $("#menu li").hover(function (e) {
+                //Khi di chuot vao	
+                //$("ul").fadeIn("slow");
+                $(this).find("ul:first").css({ visibility: "visible", display: "none" }).show(500);
+            }, function (e) {
+                //Khi di chuot ra
+                $(this).find("ul:first").css("visibility", "hidden");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<form id="frmMasterPage" runat="server">
+<div class="wrapper">
+      <div class="banner">
+    </div>
+  <div id="menu">
+    <ul id="">
+    	<li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/admin/Default.aspx">Trang chủ</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/admin/manager.aspx">Quản lý</asp:HyperLink>
+        	<ul>
+				<li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/admin/employee.aspx">QL Nhân viên</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/admin/customer.aspx">QL Khách hàng</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/admin/store.aspx">QL Đại lý</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/admin/equipment.aspx">QL Thiết bị</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/admin/connection.aspx">QL kết nối</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/admin/deposit.aspx">QL Đặt cọc</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/admin/package.aspx">QL Gói DV</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/admin/systemConfig.aspx">QL cấu hình</asp:HyperLink></li>
+			</ul>
+        </li>
+        <li><a href="#">Xử Lý</a>
+        	<ul>
+				<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/admin/order.aspx">XL Đơn hàng</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/admin/feedback.aspx">XL ý Phản hồi</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/admin/checkEquipment.aspx">Kiểm tra thiết bị</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/admin/checkLocal.aspx">Kiểm tra vị trí</asp:HyperLink></li>
+			</ul>
+        </li>        
+        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="#">Thống kê</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="#">Trợ giúp</asp:HyperLink></li>
+    </ul>
+  </div>
+  <div class="conten">
+    	<div class="info">
+        	<table width="150px" style="margin:auto">
+            	<tr><td  style="width:200px; text-align:center;"><asp:Image
+                        ID="srcImg" runat="server" Width="100px" /></td></tr>
+                	<tr><td>
+                        <asp:LinkButton ID="lbtLogout" runat="server" onclick="lbtLogout_Click">Thoát</asp:LinkButton>
+                        </td></tr>
+                    <tr><td>
+                        <asp:Label ID="lbluser" runat="server"></asp:Label>
+                        </td></tr>
+                	<tr><td>
+                        <asp:Label ID="lblrole" runat="server"></asp:Label>
+                        </td></tr>
+            </table>
+        </div>
+        <div class="container">
+            <div class="title">
+                <asp:ContentPlaceHolder id="Mesages" runat="server">
+                    Trang chủ
+                </asp:ContentPlaceHolder>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </div>     
+        </div>
+    </div>
+    
+    <div class="footer">
+        <br />
+        <address>Coppyright © By HDSoft</address>
+    </div>
+</div>
+</form>
+</body>
+</html>

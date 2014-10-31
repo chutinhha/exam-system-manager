@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HDS_Test_SystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HDS_Test_SystemModelStoreContainer">
+          <EntitySet Name="HDS_Answer" EntityType="HDS_Test_SystemModel.Store.HDS_Answer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_Category" EntityType="HDS_Test_SystemModel.Store.HDS_Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_Employee" EntityType="HDS_Test_SystemModel.Store.HDS_Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_Exam" EntityType="HDS_Test_SystemModel.Store.HDS_Exam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_ExamDetail" EntityType="HDS_Test_SystemModel.Store.HDS_ExamDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_ExamDetailAnswer" EntityType="HDS_Test_SystemModel.Store.HDS_ExamDetailAnswer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_InitExam" EntityType="HDS_Test_SystemModel.Store.HDS_InitExam" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_InitExamDetail" EntityType="HDS_Test_SystemModel.Store.HDS_InitExamDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_Lever" EntityType="HDS_Test_SystemModel.Store.HDS_Lever" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_Question" EntityType="HDS_Test_SystemModel.Store.HDS_Question" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_StandardRating" EntityType="HDS_Test_SystemModel.Store.HDS_StandardRating" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_TypeQuestion" EntityType="HDS_Test_SystemModel.Store.HDS_TypeQuestion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HDS_User" EntityType="HDS_Test_SystemModel.Store.HDS_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="HDS_Test_SystemModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__HDS_Answe__Que_I__1FCDBCEB" Association="HDS_Test_SystemModel.Store.FK__HDS_Answe__Que_I__1FCDBCEB">
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+            <End Role="HDS_Answer" EntitySet="HDS_Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Exam__Emp_ID__2E1BDC42" Association="HDS_Test_SystemModel.Store.FK__HDS_Exam__Emp_ID__2E1BDC42">
+            <End Role="HDS_Employee" EntitySet="HDS_Employee" />
+            <End Role="HDS_Exam" EntitySet="HDS_Exam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Exa_I__31EC6D26" Association="HDS_Test_SystemModel.Store.FK__HDS_ExamD__Exa_I__31EC6D26">
+            <End Role="HDS_Exam" EntitySet="HDS_Exam" />
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Exd_I__34C8D9D1" Association="HDS_Test_SystemModel.Store.FK__HDS_ExamD__Exd_I__34C8D9D1">
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+            <End Role="HDS_ExamDetailAnswer" EntitySet="HDS_ExamDetailAnswer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Que_I__30F848ED" Association="HDS_Test_SystemModel.Store.FK__HDS_ExamD__Que_I__30F848ED">
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Cat_I__239E4DCF" Association="HDS_Test_SystemModel.Store.FK__HDS_InitE__Cat_I__239E4DCF">
+            <End Role="HDS_Category" EntitySet="HDS_Category" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Iex_I__2A4B4B5E" Association="HDS_Test_SystemModel.Store.FK__HDS_InitE__Iex_I__2A4B4B5E">
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+            <End Role="HDS_InitExamDetail" EntitySet="HDS_InitExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Lev_I__22AA2996" Association="HDS_Test_SystemModel.Store.FK__HDS_InitE__Lev_I__22AA2996">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Lev_I__2B3F6F97" Association="HDS_Test_SystemModel.Store.FK__HDS_InitE__Lev_I__2B3F6F97">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_InitExamDetail" EntitySet="HDS_InitExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Typ_I__24927208" Association="HDS_Test_SystemModel.Store.FK__HDS_InitE__Typ_I__24927208">
+            <End Role="HDS_TypeQuestion" EntitySet="HDS_TypeQuestion" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Cat_I__1BFD2C07" Association="HDS_Test_SystemModel.Store.FK__HDS_Quest__Cat_I__1BFD2C07">
+            <End Role="HDS_Category" EntitySet="HDS_Category" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Lev_I__1B0907CE" Association="HDS_Test_SystemModel.Store.FK__HDS_Quest__Lev_I__1B0907CE">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Typ_I__1CF15040" Association="HDS_Test_SystemModel.Store.FK__HDS_Quest__Typ_I__1CF15040">
+            <End Role="HDS_TypeQuestion" EntitySet="HDS_TypeQuestion" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Stand__Iex_I__276EDEB3" Association="HDS_Test_SystemModel.Store.FK__HDS_Stand__Iex_I__276EDEB3">
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+            <End Role="HDS_StandardRating" EntitySet="HDS_StandardRating" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_User__Emp_ID__182C9B23" Association="HDS_Test_SystemModel.Store.FK__HDS_User__Emp_ID__182C9B23">
+            <End Role="HDS_Employee" EntitySet="HDS_Employee" />
+            <End Role="HDS_User" EntitySet="HDS_User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HDS_Answer">
+          <Key>
+            <PropertyRef Name="Ans_ID" />
+          </Key>
+          <Property Name="Ans_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Que_ID" Type="int" />
+          <Property Name="Ans_Answer" Type="ntext" />
+          <Property Name="Ans_IsTrue" Type="bit" />
+        </EntityType>
+        <EntityType Name="HDS_Category">
+          <Key>
+            <PropertyRef Name="Cat_ID" />
+          </Key>
+          <Property Name="Cat_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cat_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Cat_Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="HDS_Employee">
+          <Key>
+            <PropertyRef Name="Emp_ID" />
+          </Key>
+          <Property Name="Emp_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="HDS_Exam">
+          <Key>
+            <PropertyRef Name="Exa_ID" />
+          </Key>
+          <Property Name="Exa_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_ID" Type="int" />
+          <Property Name="Exa_FromDate" Type="datetime" />
+          <Property Name="Exa_ToDate" Type="datetime" />
+          <Property Name="Res_Result" Type="nvarchar" MaxLength="100" />
+          <Property Name="Res_rating" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="HDS_ExamDetail">
+          <Key>
+            <PropertyRef Name="Exd_ID" />
+          </Key>
+          <Property Name="Exd_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Que_ID" Type="int" />
+          <Property Name="Exa_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="HDS_ExamDetailAnswer">
+          <Key>
+            <PropertyRef Name="Exda_ID" />
+          </Key>
+          <Property Name="Exda_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Exd_ID" Type="int" />
+          <Property Name="Exda_Answer" Type="ntext" />
+        </EntityType>
+        <EntityType Name="HDS_InitExam">
+          <Key>
+            <PropertyRef Name="Iex_ID" />
+          </Key>
+          <Property Name="Iex_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Iex_Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Iex_Date" Type="datetime" />
+          <Property Name="Lev_ID" Type="int" />
+          <Property Name="Cat_ID" Type="int" />
+          <Property Name="Typ_ID" Type="int" />
+          <Property Name="Iex_NumQuestion" Type="int" />
+        </EntityType>
+        <EntityType Name="HDS_InitExamDetail">
+          <Key>
+            <PropertyRef Name="Iexd_ID" />
+          </Key>
+          <Property Name="Iexd_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_ID" Type="int" />
+          <Property Name="Lev_ID" Type="int" />
+          <Property Name="Iexd_NumQuestion" Type="int" />
+        </EntityType>
+        <EntityType Name="HDS_Lever">
+          <Key>
+            <PropertyRef Name="Lev_ID" />
+          </Key>
+          <Property Name="Lev_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Lev_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Lev_Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="HDS_Question">
+          <Key>
+            <PropertyRef Name="Que_ID" />
+          </Key>
+          <Property Name="Que_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Lev_ID" Type="int" />
+          <Property Name="Cat_ID" Type="int" />
+          <Property Name="Typ_ID" Type="int" />
+          <Property Name="Que_Title" Type="ntext" />
+          <Property Name="Que_Description" Type="ntext" />
+        </EntityType>
+        <EntityType Name="HDS_StandardRating">
+          <Key>
+            <PropertyRef Name="Rat_ID" />
+          </Key>
+          <Property Name="Rat_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_ID" Type="int" />
+          <Property Name="Rat_FromMark" Type="int" />
+          <Property Name="Rat_ToMark" Type="int" />
+          <Property Name="Rat_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Rat_Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="HDS_TypeQuestion">
+          <Key>
+            <PropertyRef Name="typ_ID" />
+          </Key>
+          <Property Name="typ_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Typ_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Typ_Description" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="HDS_User">
+          <Key>
+            <PropertyRef Name="Usr_ID" />
+          </Key>
+          <Property Name="Usr_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_ID" Type="int" />
+          <Property Name="Usr_Username" Type="nvarchar" MaxLength="100" />
+          <Property Name="Usr_Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Usr_Role" Type="nvarchar" MaxLength="20" />
+          <Property Name="Usr_Avata" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__HDS_Answe__Que_I__1FCDBCEB">
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.Store.HDS_Question" Multiplicity="0..1" />
+          <End Role="HDS_Answer" Type="HDS_Test_SystemModel.Store.HDS_Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Question">
+              <PropertyRef Name="Que_ID" />
+            </Principal>
+            <Dependent Role="HDS_Answer">
+              <PropertyRef Name="Que_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Exam__Emp_ID__2E1BDC42">
+          <End Role="HDS_Employee" Type="HDS_Test_SystemModel.Store.HDS_Employee" Multiplicity="0..1" />
+          <End Role="HDS_Exam" Type="HDS_Test_SystemModel.Store.HDS_Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Employee">
+              <PropertyRef Name="Emp_ID" />
+            </Principal>
+            <Dependent Role="HDS_Exam">
+              <PropertyRef Name="Emp_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Exa_I__31EC6D26">
+          <End Role="HDS_Exam" Type="HDS_Test_SystemModel.Store.HDS_Exam" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.Store.HDS_ExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Exam">
+              <PropertyRef Name="Exa_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetail">
+              <PropertyRef Name="Exa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Exd_I__34C8D9D1">
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.Store.HDS_ExamDetail" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetailAnswer" Type="HDS_Test_SystemModel.Store.HDS_ExamDetailAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_ExamDetail">
+              <PropertyRef Name="Exd_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetailAnswer">
+              <PropertyRef Name="Exd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Que_I__30F848ED">
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.Store.HDS_Question" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.Store.HDS_ExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Question">
+              <PropertyRef Name="Que_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetail">
+              <PropertyRef Name="Que_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Cat_I__239E4DCF">
+          <End Role="HDS_Category" Type="HDS_Test_SystemModel.Store.HDS_Category" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.Store.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Category">
+              <PropertyRef Name="Cat_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Cat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Iex_I__2A4B4B5E">
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.Store.HDS_InitExam" Multiplicity="0..1" />
+          <End Role="HDS_InitExamDetail" Type="HDS_Test_SystemModel.Store.HDS_InitExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_InitExam">
+              <PropertyRef Name="Iex_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExamDetail">
+              <PropertyRef Name="Iex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Lev_I__22AA2996">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.Store.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.Store.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Lev_I__2B3F6F97">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.Store.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_InitExamDetail" Type="HDS_Test_SystemModel.Store.HDS_InitExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExamDetail">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Typ_I__24927208">
+          <End Role="HDS_TypeQuestion" Type="HDS_Test_SystemModel.Store.HDS_TypeQuestion" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.Store.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_TypeQuestion">
+              <PropertyRef Name="typ_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Typ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Cat_I__1BFD2C07">
+          <End Role="HDS_Category" Type="HDS_Test_SystemModel.Store.HDS_Category" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.Store.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Category">
+              <PropertyRef Name="Cat_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Cat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Lev_I__1B0907CE">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.Store.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.Store.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Typ_I__1CF15040">
+          <End Role="HDS_TypeQuestion" Type="HDS_Test_SystemModel.Store.HDS_TypeQuestion" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.Store.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_TypeQuestion">
+              <PropertyRef Name="typ_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Typ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Stand__Iex_I__276EDEB3">
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.Store.HDS_InitExam" Multiplicity="0..1" />
+          <End Role="HDS_StandardRating" Type="HDS_Test_SystemModel.Store.HDS_StandardRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_InitExam">
+              <PropertyRef Name="Iex_ID" />
+            </Principal>
+            <Dependent Role="HDS_StandardRating">
+              <PropertyRef Name="Iex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_User__Emp_ID__182C9B23">
+          <End Role="HDS_Employee" Type="HDS_Test_SystemModel.Store.HDS_Employee" Multiplicity="0..1" />
+          <End Role="HDS_User" Type="HDS_Test_SystemModel.Store.HDS_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Employee">
+              <PropertyRef Name="Emp_ID" />
+            </Principal>
+            <Dependent Role="HDS_User">
+              <PropertyRef Name="Emp_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HDS_Test_SystemModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ExamSystemManagerDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HDS_Answer" EntityType="HDS_Test_SystemModel.HDS_Answer" />
+          <EntitySet Name="HDS_Category" EntityType="HDS_Test_SystemModel.HDS_Category" />
+          <EntitySet Name="HDS_Employee" EntityType="HDS_Test_SystemModel.HDS_Employee" />
+          <EntitySet Name="HDS_Exam" EntityType="HDS_Test_SystemModel.HDS_Exam" />
+          <EntitySet Name="HDS_ExamDetail" EntityType="HDS_Test_SystemModel.HDS_ExamDetail" />
+          <EntitySet Name="HDS_ExamDetailAnswer" EntityType="HDS_Test_SystemModel.HDS_ExamDetailAnswer" />
+          <EntitySet Name="HDS_InitExam" EntityType="HDS_Test_SystemModel.HDS_InitExam" />
+          <EntitySet Name="HDS_InitExamDetail" EntityType="HDS_Test_SystemModel.HDS_InitExamDetail" />
+          <EntitySet Name="HDS_Lever" EntityType="HDS_Test_SystemModel.HDS_Lever" />
+          <EntitySet Name="HDS_Question" EntityType="HDS_Test_SystemModel.HDS_Question" />
+          <EntitySet Name="HDS_StandardRating" EntityType="HDS_Test_SystemModel.HDS_StandardRating" />
+          <EntitySet Name="HDS_TypeQuestion" EntityType="HDS_Test_SystemModel.HDS_TypeQuestion" />
+          <EntitySet Name="HDS_User" EntityType="HDS_Test_SystemModel.HDS_User" />
+          <AssociationSet Name="FK__HDS_Answe__Que_I__22AA2996" Association="HDS_Test_SystemModel.FK__HDS_Answe__Que_I__22AA2996">
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+            <End Role="HDS_Answer" EntitySet="HDS_Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Cat_I__267ABA7A" Association="HDS_Test_SystemModel.FK__HDS_InitE__Cat_I__267ABA7A">
+            <End Role="HDS_Category" EntitySet="HDS_Category" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Cat_I__1ED998B2" Association="HDS_Test_SystemModel.FK__HDS_Quest__Cat_I__1ED998B2">
+            <End Role="HDS_Category" EntitySet="HDS_Category" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Exam__Emp_ID__30F848ED" Association="HDS_Test_SystemModel.FK__HDS_Exam__Emp_ID__30F848ED">
+            <End Role="HDS_Employee" EntitySet="HDS_Employee" />
+            <End Role="HDS_Exam" EntitySet="HDS_Exam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_User__Emp_ID__1B0907CE" Association="HDS_Test_SystemModel.FK__HDS_User__Emp_ID__1B0907CE">
+            <End Role="HDS_Employee" EntitySet="HDS_Employee" />
+            <End Role="HDS_User" EntitySet="HDS_User" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Exa_I__34C8D9D1" Association="HDS_Test_SystemModel.FK__HDS_ExamD__Exa_I__34C8D9D1">
+            <End Role="HDS_Exam" EntitySet="HDS_Exam" />
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Exd_I__37A5467C" Association="HDS_Test_SystemModel.FK__HDS_ExamD__Exd_I__37A5467C">
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+            <End Role="HDS_ExamDetailAnswer" EntitySet="HDS_ExamDetailAnswer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_ExamD__Que_I__33D4B598" Association="HDS_Test_SystemModel.FK__HDS_ExamD__Que_I__33D4B598">
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+            <End Role="HDS_ExamDetail" EntitySet="HDS_ExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Iex_I__2D27B809" Association="HDS_Test_SystemModel.FK__HDS_InitE__Iex_I__2D27B809">
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+            <End Role="HDS_InitExamDetail" EntitySet="HDS_InitExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Lev_I__25869641" Association="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__25869641">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Typ_I__276EDEB3" Association="HDS_Test_SystemModel.FK__HDS_InitE__Typ_I__276EDEB3">
+            <End Role="HDS_TypeQuestion" EntitySet="HDS_TypeQuestion" />
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Stand__Iex_I__2A4B4B5E" Association="HDS_Test_SystemModel.FK__HDS_Stand__Iex_I__2A4B4B5E">
+            <End Role="HDS_InitExam" EntitySet="HDS_InitExam" />
+            <End Role="HDS_StandardRating" EntitySet="HDS_StandardRating" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_InitE__Lev_I__2E1BDC42" Association="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__2E1BDC42">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_InitExamDetail" EntitySet="HDS_InitExamDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Lev_I__1DE57479" Association="HDS_Test_SystemModel.FK__HDS_Quest__Lev_I__1DE57479">
+            <End Role="HDS_Lever" EntitySet="HDS_Lever" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HDS_Quest__Typ_I__1FCDBCEB" Association="HDS_Test_SystemModel.FK__HDS_Quest__Typ_I__1FCDBCEB">
+            <End Role="HDS_TypeQuestion" EntitySet="HDS_TypeQuestion" />
+            <End Role="HDS_Question" EntitySet="HDS_Question" />
+          </AssociationSet>
+          <EntitySet Name="sysdiagram1" EntityType="HDS_Test_SystemModel.sysdiagram1" />
+        </EntityContainer>
+        <EntityType Name="HDS_Answer">
+          <Key>
+            <PropertyRef Name="Ans_ID" />
+          </Key>
+          <Property Name="Ans_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Que_ID" Type="Int32" />
+          <Property Name="Ans_Answer" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Ans_IsTrue" Type="Boolean" />
+          <NavigationProperty Name="HDS_Question" Relationship="HDS_Test_SystemModel.FK__HDS_Answe__Que_I__22AA2996" FromRole="HDS_Answer" ToRole="HDS_Question" />
+        </EntityType>
+        <EntityType Name="HDS_Category">
+          <Key>
+            <PropertyRef Name="Cat_ID" />
+          </Key>
+          <Property Name="Cat_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cat_Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Cat_Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_InitExam" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Cat_I__267ABA7A" FromRole="HDS_Category" ToRole="HDS_InitExam" />
+          <NavigationProperty Name="HDS_Question" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Cat_I__1ED998B2" FromRole="HDS_Category" ToRole="HDS_Question" />
+        </EntityType>
+        <EntityType Name="HDS_Employee">
+          <Key>
+            <PropertyRef Name="Emp_ID" />
+          </Key>
+          <Property Name="Emp_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_Exam" Relationship="HDS_Test_SystemModel.FK__HDS_Exam__Emp_ID__30F848ED" FromRole="HDS_Employee" ToRole="HDS_Exam" />
+          <NavigationProperty Name="HDS_User" Relationship="HDS_Test_SystemModel.FK__HDS_User__Emp_ID__1B0907CE" FromRole="HDS_Employee" ToRole="HDS_User" />
+        </EntityType>
+        <EntityType Name="HDS_Exam">
+          <Key>
+            <PropertyRef Name="Exa_ID" />
+          </Key>
+          <Property Name="Exa_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_ID" Type="Int32" />
+          <Property Name="Exa_FromDate" Type="DateTime" />
+          <Property Name="Exa_ToDate" Type="DateTime" />
+          <NavigationProperty Name="HDS_Employee" Relationship="HDS_Test_SystemModel.FK__HDS_Exam__Emp_ID__30F848ED" FromRole="HDS_Exam" ToRole="HDS_Employee" />
+          <NavigationProperty Name="HDS_ExamDetail" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Exa_I__34C8D9D1" FromRole="HDS_Exam" ToRole="HDS_ExamDetail" />
+          <Property Type="String" Name="Res_Result" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Res_rating" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HDS_ExamDetail">
+          <Key>
+            <PropertyRef Name="Exd_ID" />
+          </Key>
+          <Property Name="Exd_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Que_ID" Type="Int32" />
+          <Property Name="Exa_ID" Type="Int32" />
+          <NavigationProperty Name="HDS_Exam" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Exa_I__34C8D9D1" FromRole="HDS_ExamDetail" ToRole="HDS_Exam" />
+          <NavigationProperty Name="HDS_ExamDetailAnswer" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Exd_I__37A5467C" FromRole="HDS_ExamDetail" ToRole="HDS_ExamDetailAnswer" />
+          <NavigationProperty Name="HDS_Question" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Que_I__33D4B598" FromRole="HDS_ExamDetail" ToRole="HDS_Question" />
+        </EntityType>
+        <EntityType Name="HDS_ExamDetailAnswer">
+          <Key>
+            <PropertyRef Name="Exda_ID" />
+          </Key>
+          <Property Name="Exda_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Exd_ID" Type="Int32" />
+          <Property Name="Exda_Answer" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_ExamDetail" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Exd_I__37A5467C" FromRole="HDS_ExamDetailAnswer" ToRole="HDS_ExamDetail" />
+        </EntityType>
+        <EntityType Name="HDS_InitExam">
+          <Key>
+            <PropertyRef Name="Iex_ID" />
+          </Key>
+          <Property Name="Iex_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_Name" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Iex_Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Iex_Date" Type="DateTime" />
+          <Property Name="Lev_ID" Type="Int32" />
+          <Property Name="Cat_ID" Type="Int32" />
+          <Property Name="Typ_ID" Type="Int32" />
+          <Property Name="Iex_NumQuestion" Type="Int32" />
+          <NavigationProperty Name="HDS_Category" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Cat_I__267ABA7A" FromRole="HDS_InitExam" ToRole="HDS_Category" />
+          <NavigationProperty Name="HDS_InitExamDetail" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Iex_I__2D27B809" FromRole="HDS_InitExam" ToRole="HDS_InitExamDetail" />
+          <NavigationProperty Name="HDS_Lever" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__25869641" FromRole="HDS_InitExam" ToRole="HDS_Lever" />
+          <NavigationProperty Name="HDS_TypeQuestion" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Typ_I__276EDEB3" FromRole="HDS_InitExam" ToRole="HDS_TypeQuestion" />
+          <NavigationProperty Name="HDS_StandardRating" Relationship="HDS_Test_SystemModel.FK__HDS_Stand__Iex_I__2A4B4B5E" FromRole="HDS_InitExam" ToRole="HDS_StandardRating" />
+        </EntityType>
+        <EntityType Name="HDS_InitExamDetail">
+          <Key>
+            <PropertyRef Name="Iexd_ID" />
+          </Key>
+          <Property Name="Iexd_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_ID" Type="Int32" />
+          <Property Name="Lev_ID" Type="Int32" />
+          <Property Name="Iexd_NumQuestion" Type="Int32" />
+          <NavigationProperty Name="HDS_InitExam" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Iex_I__2D27B809" FromRole="HDS_InitExamDetail" ToRole="HDS_InitExam" />
+          <NavigationProperty Name="HDS_Lever" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__2E1BDC42" FromRole="HDS_InitExamDetail" ToRole="HDS_Lever" />
+        </EntityType>
+        <EntityType Name="HDS_Lever">
+          <Key>
+            <PropertyRef Name="Lev_ID" />
+          </Key>
+          <Property Name="Lev_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lev_Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Lev_Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_InitExam" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__25869641" FromRole="HDS_Lever" ToRole="HDS_InitExam" />
+          <NavigationProperty Name="HDS_InitExamDetail" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__2E1BDC42" FromRole="HDS_Lever" ToRole="HDS_InitExamDetail" />
+          <NavigationProperty Name="HDS_Question" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Lev_I__1DE57479" FromRole="HDS_Lever" ToRole="HDS_Question" />
+        </EntityType>
+        <EntityType Name="HDS_Question">
+          <Key>
+            <PropertyRef Name="Que_ID" />
+          </Key>
+          <Property Name="Que_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lev_ID" Type="Int32" />
+          <Property Name="Cat_ID" Type="Int32" />
+          <Property Name="Typ_ID" Type="Int32" />
+          <Property Name="Que_Title" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Que_Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_Answer" Relationship="HDS_Test_SystemModel.FK__HDS_Answe__Que_I__22AA2996" FromRole="HDS_Question" ToRole="HDS_Answer" />
+          <NavigationProperty Name="HDS_Category" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Cat_I__1ED998B2" FromRole="HDS_Question" ToRole="HDS_Category" />
+          <NavigationProperty Name="HDS_ExamDetail" Relationship="HDS_Test_SystemModel.FK__HDS_ExamD__Que_I__33D4B598" FromRole="HDS_Question" ToRole="HDS_ExamDetail" />
+          <NavigationProperty Name="HDS_Lever" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Lev_I__1DE57479" FromRole="HDS_Question" ToRole="HDS_Lever" />
+          <NavigationProperty Name="HDS_TypeQuestion" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Typ_I__1FCDBCEB" FromRole="HDS_Question" ToRole="HDS_TypeQuestion" />
+        </EntityType>
+        <EntityType Name="HDS_StandardRating">
+          <Key>
+            <PropertyRef Name="Rat_ID" />
+          </Key>
+          <Property Name="Rat_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Iex_ID" Type="Int32" />
+          <Property Name="Rat_FromMark" Type="Int32" />
+          <Property Name="Rat_ToMark" Type="Int32" />
+          <Property Name="Rat_Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Rat_Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_InitExam" Relationship="HDS_Test_SystemModel.FK__HDS_Stand__Iex_I__2A4B4B5E" FromRole="HDS_StandardRating" ToRole="HDS_InitExam" />
+        </EntityType>
+        <EntityType Name="HDS_TypeQuestion">
+          <Key>
+            <PropertyRef Name="typ_ID" />
+          </Key>
+          <Property Name="typ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ_Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Typ_Description" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_InitExam" Relationship="HDS_Test_SystemModel.FK__HDS_InitE__Typ_I__276EDEB3" FromRole="HDS_TypeQuestion" ToRole="HDS_InitExam" />
+          <NavigationProperty Name="HDS_Question" Relationship="HDS_Test_SystemModel.FK__HDS_Quest__Typ_I__1FCDBCEB" FromRole="HDS_TypeQuestion" ToRole="HDS_Question" />
+        </EntityType>
+        <EntityType Name="HDS_User">
+          <Key>
+            <PropertyRef Name="Usr_ID" />
+          </Key>
+          <Property Name="Usr_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Emp_ID" Type="Int32" />
+          <Property Name="Usr_Username" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Usr_Password" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HDS_Employee" Relationship="HDS_Test_SystemModel.FK__HDS_User__Emp_ID__1B0907CE" FromRole="HDS_User" ToRole="HDS_Employee" />
+          <Property Type="String" Name="Usr_Role" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Usr_Avata" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__HDS_Answe__Que_I__22AA2996">
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.HDS_Question" Multiplicity="0..1" />
+          <End Role="HDS_Answer" Type="HDS_Test_SystemModel.HDS_Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Question">
+              <PropertyRef Name="Que_ID" />
+            </Principal>
+            <Dependent Role="HDS_Answer">
+              <PropertyRef Name="Que_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Cat_I__267ABA7A">
+          <End Role="HDS_Category" Type="HDS_Test_SystemModel.HDS_Category" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Category">
+              <PropertyRef Name="Cat_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Cat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Cat_I__1ED998B2">
+          <End Role="HDS_Category" Type="HDS_Test_SystemModel.HDS_Category" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Category">
+              <PropertyRef Name="Cat_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Cat_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Exam__Emp_ID__30F848ED">
+          <End Role="HDS_Employee" Type="HDS_Test_SystemModel.HDS_Employee" Multiplicity="0..1" />
+          <End Role="HDS_Exam" Type="HDS_Test_SystemModel.HDS_Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Employee">
+              <PropertyRef Name="Emp_ID" />
+            </Principal>
+            <Dependent Role="HDS_Exam">
+              <PropertyRef Name="Emp_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_User__Emp_ID__1B0907CE">
+          <End Role="HDS_Employee" Type="HDS_Test_SystemModel.HDS_Employee" Multiplicity="0..1" />
+          <End Role="HDS_User" Type="HDS_Test_SystemModel.HDS_User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Employee">
+              <PropertyRef Name="Emp_ID" />
+            </Principal>
+            <Dependent Role="HDS_User">
+              <PropertyRef Name="Emp_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Exa_I__34C8D9D1">
+          <End Role="HDS_Exam" Type="HDS_Test_SystemModel.HDS_Exam" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.HDS_ExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Exam">
+              <PropertyRef Name="Exa_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetail">
+              <PropertyRef Name="Exa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Exd_I__37A5467C">
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.HDS_ExamDetail" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetailAnswer" Type="HDS_Test_SystemModel.HDS_ExamDetailAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_ExamDetail">
+              <PropertyRef Name="Exd_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetailAnswer">
+              <PropertyRef Name="Exd_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_ExamD__Que_I__33D4B598">
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.HDS_Question" Multiplicity="0..1" />
+          <End Role="HDS_ExamDetail" Type="HDS_Test_SystemModel.HDS_ExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Question">
+              <PropertyRef Name="Que_ID" />
+            </Principal>
+            <Dependent Role="HDS_ExamDetail">
+              <PropertyRef Name="Que_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Iex_I__2D27B809">
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.HDS_InitExam" Multiplicity="0..1" />
+          <End Role="HDS_InitExamDetail" Type="HDS_Test_SystemModel.HDS_InitExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_InitExam">
+              <PropertyRef Name="Iex_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExamDetail">
+              <PropertyRef Name="Iex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Lev_I__25869641">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Typ_I__276EDEB3">
+          <End Role="HDS_TypeQuestion" Type="HDS_Test_SystemModel.HDS_TypeQuestion" Multiplicity="0..1" />
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.HDS_InitExam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_TypeQuestion">
+              <PropertyRef Name="typ_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExam">
+              <PropertyRef Name="Typ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Stand__Iex_I__2A4B4B5E">
+          <End Role="HDS_InitExam" Type="HDS_Test_SystemModel.HDS_InitExam" Multiplicity="0..1" />
+          <End Role="HDS_StandardRating" Type="HDS_Test_SystemModel.HDS_StandardRating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_InitExam">
+              <PropertyRef Name="Iex_ID" />
+            </Principal>
+            <Dependent Role="HDS_StandardRating">
+              <PropertyRef Name="Iex_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_InitE__Lev_I__2E1BDC42">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_InitExamDetail" Type="HDS_Test_SystemModel.HDS_InitExamDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_InitExamDetail">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Lev_I__1DE57479">
+          <End Role="HDS_Lever" Type="HDS_Test_SystemModel.HDS_Lever" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_Lever">
+              <PropertyRef Name="Lev_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Lev_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HDS_Quest__Typ_I__1FCDBCEB">
+          <End Role="HDS_TypeQuestion" Type="HDS_Test_SystemModel.HDS_TypeQuestion" Multiplicity="0..1" />
+          <End Role="HDS_Question" Type="HDS_Test_SystemModel.HDS_Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HDS_TypeQuestion">
+              <PropertyRef Name="typ_ID" />
+            </Principal>
+            <Dependent Role="HDS_Question">
+              <PropertyRef Name="Typ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="sysdiagram1">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HDS_Test_SystemModelStoreContainer" CdmEntityContainer="ExamSystemManagerDBEntities">
+          <EntitySetMapping Name="HDS_Answer">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Answer">
+              <MappingFragment StoreEntitySet="HDS_Answer">
+                <ScalarProperty Name="Ans_ID" ColumnName="Ans_ID" />
+                <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+                <ScalarProperty Name="Ans_Answer" ColumnName="Ans_Answer" />
+                <ScalarProperty Name="Ans_IsTrue" ColumnName="Ans_IsTrue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_Category">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Category">
+              <MappingFragment StoreEntitySet="HDS_Category">
+                <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+                <ScalarProperty Name="Cat_Name" ColumnName="Cat_Name" />
+                <ScalarProperty Name="Cat_Description" ColumnName="Cat_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_Employee">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Employee">
+              <MappingFragment StoreEntitySet="HDS_Employee">
+                <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+                <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_Exam">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Exam">
+              <MappingFragment StoreEntitySet="HDS_Exam">
+                <ScalarProperty Name="Res_rating" ColumnName="Res_rating" />
+                <ScalarProperty Name="Res_Result" ColumnName="Res_Result" />
+                <ScalarProperty Name="Exa_ID" ColumnName="Exa_ID" />
+                <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+                <ScalarProperty Name="Exa_FromDate" ColumnName="Exa_FromDate" />
+                <ScalarProperty Name="Exa_ToDate" ColumnName="Exa_ToDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_ExamDetail">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_ExamDetail">
+              <MappingFragment StoreEntitySet="HDS_ExamDetail">
+                <ScalarProperty Name="Exd_ID" ColumnName="Exd_ID" />
+                <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+                <ScalarProperty Name="Exa_ID" ColumnName="Exa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_ExamDetailAnswer">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_ExamDetailAnswer">
+              <MappingFragment StoreEntitySet="HDS_ExamDetailAnswer">
+                <ScalarProperty Name="Exda_ID" ColumnName="Exda_ID" />
+                <ScalarProperty Name="Exd_ID" ColumnName="Exd_ID" />
+                <ScalarProperty Name="Exda_Answer" ColumnName="Exda_Answer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_InitExam">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_InitExam">
+              <MappingFragment StoreEntitySet="HDS_InitExam">
+                <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+                <ScalarProperty Name="Iex_Name" ColumnName="Iex_Name" />
+                <ScalarProperty Name="Iex_Description" ColumnName="Iex_Description" />
+                <ScalarProperty Name="Iex_Date" ColumnName="Iex_Date" />
+                <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+                <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+                <ScalarProperty Name="Typ_ID" ColumnName="Typ_ID" />
+                <ScalarProperty Name="Iex_NumQuestion" ColumnName="Iex_NumQuestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_InitExamDetail">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_InitExamDetail">
+              <MappingFragment StoreEntitySet="HDS_InitExamDetail">
+                <ScalarProperty Name="Iexd_ID" ColumnName="Iexd_ID" />
+                <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+                <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+                <ScalarProperty Name="Iexd_NumQuestion" ColumnName="Iexd_NumQuestion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_Lever">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Lever">
+              <MappingFragment StoreEntitySet="HDS_Lever">
+                <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+                <ScalarProperty Name="Lev_Name" ColumnName="Lev_Name" />
+                <ScalarProperty Name="Lev_Description" ColumnName="Lev_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_Question">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_Question">
+              <MappingFragment StoreEntitySet="HDS_Question">
+                <ScalarProperty Name="Que_ID" ColumnName="Que_ID" />
+                <ScalarProperty Name="Lev_ID" ColumnName="Lev_ID" />
+                <ScalarProperty Name="Cat_ID" ColumnName="Cat_ID" />
+                <ScalarProperty Name="Typ_ID" ColumnName="Typ_ID" />
+                <ScalarProperty Name="Que_Title" ColumnName="Que_Title" />
+                <ScalarProperty Name="Que_Description" ColumnName="Que_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_StandardRating">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_StandardRating">
+              <MappingFragment StoreEntitySet="HDS_StandardRating">
+                <ScalarProperty Name="Rat_ID" ColumnName="Rat_ID" />
+                <ScalarProperty Name="Iex_ID" ColumnName="Iex_ID" />
+                <ScalarProperty Name="Rat_FromMark" ColumnName="Rat_FromMark" />
+                <ScalarProperty Name="Rat_ToMark" ColumnName="Rat_ToMark" />
+                <ScalarProperty Name="Rat_Name" ColumnName="Rat_Name" />
+                <ScalarProperty Name="Rat_Description" ColumnName="Rat_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_TypeQuestion">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_TypeQuestion">
+              <MappingFragment StoreEntitySet="HDS_TypeQuestion">
+                <ScalarProperty Name="typ_ID" ColumnName="typ_ID" />
+                <ScalarProperty Name="Typ_Name" ColumnName="Typ_Name" />
+                <ScalarProperty Name="Typ_Description" ColumnName="Typ_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HDS_User">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.HDS_User">
+              <MappingFragment StoreEntitySet="HDS_User">
+                <ScalarProperty Name="Usr_Avata" ColumnName="Usr_Avata" />
+                <ScalarProperty Name="Usr_Role" ColumnName="Usr_Role" />
+                <ScalarProperty Name="Usr_ID" ColumnName="Usr_ID" />
+                <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+                <ScalarProperty Name="Usr_Username" ColumnName="Usr_Username" />
+                <ScalarProperty Name="Usr_Password" ColumnName="Usr_Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagram1">
+            <EntityTypeMapping TypeName="HDS_Test_SystemModel.sysdiagram1">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ExamSystemManager">
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Answer" Width="1.5" PointX="8.25" PointY="5.875" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Category" Width="1.5" PointX="0.75" PointY="2.5" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Employee" Width="1.5" PointX="3.75" PointY="12.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Exam" Width="1.5" PointX="6" PointY="12.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_ExamDetail" Width="1.5" PointX="8.25" PointY="8.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_ExamDetailAnswer" Width="1.5" PointX="10.5" PointY="9" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_InitExam" Width="1.5" PointX="3" PointY="5.125" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_InitExamDetail" Width="1.5" PointX="8.25" PointY="2.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Lever" Width="1.5" PointX="0.75" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_Question" Width="1.5" PointX="6" PointY="5.25" Height="3.1340950520833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_StandardRating" Width="1.5" PointX="5.25" PointY="9.625" Height="2.3648893229166745" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_TypeQuestion" Width="1.5" PointX="0.75" PointY="9.25" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.HDS_User" Width="1.5" PointX="6" PointY="19.375" Height="1.9802864583333388" IsExpanded="true" />
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Answe__Que_I__22AA2996" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="6.8651432291666667" />
+          <ConnectorPoint PointX="8.25" PointY="6.8651432291666667" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_InitE__Cat_I__267ABA7A" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.6365364583333362" />
+          <ConnectorPoint PointX="3.5885391666666666" PointY="3.6365364583333357" />
+          <ConnectorPoint PointX="3.7552058333333336" PointY="3.6365364583333362" />
+          <ConnectorPoint PointX="4.40625" PointY="3.6365364583333362" />
+          <ConnectorPoint PointX="4.40625" PointY="5.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Quest__Cat_I__1ED998B2" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.0896639583333343" />
+          <ConnectorPoint PointX="3.5885391666666666" PointY="4.0896639583333334" />
+          <ConnectorPoint PointX="3.7552058333333336" PointY="4.0896639583333343" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="4.0896639583333334" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="4.0896639583333343" />
+          <ConnectorPoint PointX="6.75" PointY="4.0896639583333343" />
+          <ConnectorPoint PointX="6.75" PointY="5.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Exam__Emp_ID__30F848ED" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="13.865143229166666" />
+          <ConnectorPoint PointX="6" PointY="13.865143229166666" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_User__Emp_ID__1B0907CE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.662985026041667" />
+          <ConnectorPoint PointX="4.5" PointY="20.557444661458334" />
+          <ConnectorPoint PointX="6" PointY="20.557444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_ExamD__Exa_I__34C8D9D1" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.15625" PointY="12.75" />
+          <ConnectorPoint PointX="7.15625" PointY="9.15625" />
+          <ConnectorPoint PointX="8.25" PointY="9.15625" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_ExamD__Exd_I__37A5467C" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="9.8939925130208337" />
+          <ConnectorPoint PointX="10.5" PointY="9.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_ExamD__Que_I__33D4B598" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.328125" PointY="8.3840950520833353" />
+          <ConnectorPoint PointX="7.328125" PointY="8.9218725" />
+          <ConnectorPoint PointX="8.25" PointY="8.9218725" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_InitE__Iex_I__2D27B809" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.6718725" PointY="5.125" />
+          <ConnectorPoint PointX="3.6718725" PointY="3.1932682291666681" />
+          <ConnectorPoint PointX="8.25" PointY="3.1932682291666681" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__25869641" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.8362939453125" />
+          <ConnectorPoint PointX="2.6666666666666665" PointY="6.8362939453124989" />
+          <ConnectorPoint PointX="2.8333333333333335" PointY="6.8362939453125" />
+          <ConnectorPoint PointX="3" PointY="6.8362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_InitE__Typ_I__276EDEB3" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.240143229166669" />
+          <ConnectorPoint PointX="3.75" PointY="10.240143229166669" />
+          <ConnectorPoint PointX="3.75" PointY="8.6436979166666674" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Stand__Iex_I__2A4B4B5E" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="8.6436979166666674" />
+          <ConnectorPoint PointX="4.1562525" PointY="11.115016276041672" />
+          <ConnectorPoint PointX="5.25" PointY="11.115016276041672" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_InitE__Lev_I__2E1BDC42" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.75" />
+          <ConnectorPoint PointX="2.625" PointY="5.375" />
+          <ConnectorPoint PointX="2.625" PointY="4.5061254244791673" />
+          <ConnectorPoint PointX="3.5885391666666666" PointY="4.5061254244791664" />
+          <ConnectorPoint PointX="3.7552058333333336" PointY="4.5061254244791673" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="4.5061254244791664" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="4.5061254244791673" />
+          <ConnectorPoint PointX="6.666666666666667" PointY="4.5061254244791664" />
+          <ConnectorPoint PointX="6.833333333333333" PointY="4.5061254244791673" />
+          <ConnectorPoint PointX="8.25" PointY="4.5061254244791673" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Quest__Lev_I__1DE57479" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.4106929179687508" />
+          <ConnectorPoint PointX="2.75" PointY="7.4106929179687508" />
+          <ConnectorPoint PointX="2.75" PointY="4.875" />
+          <ConnectorPoint PointX="3.5885391666666666" PointY="4.8749999999999991" />
+          <ConnectorPoint PointX="3.7552058333333336" PointY="4.875" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="4.8749999999999991" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="4.875" />
+          <ConnectorPoint PointX="6.343748" PointY="4.875" />
+          <ConnectorPoint PointX="6.343748" PointY="5.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="HDS_Test_SystemModel.FK__HDS_Quest__Typ_I__1FCDBCEB" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.40625" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="9.40625" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="9.40625" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="9.40625" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="9.40625" />
+          <ConnectorPoint PointX="6.984375" PointY="9.40625" />
+          <ConnectorPoint PointX="6.984375" PointY="8.3840950520833353" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="HDS_Test_SystemModel.sysdiagram1" Width="1.5" PointX="3.75" PointY="0.75" Height="1.9802864583333388" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

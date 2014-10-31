@@ -1,0 +1,6 @@
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\bin\Debug\ExamSystemManager.Data.dll.config
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\bin\Debug\ExamSystemManager.Data.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\bin\Debug\ExamSystemManager.Data.pdb
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\obj\Debug\ExamSystemManager.Data.dll
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\obj\Debug\ExamSystemManager.Data.pdb
+E:\Workspace\C#\ExamSystemManager\ExamSystemManager.Data\obj\Debug\ExamSystemManager.Data.csprojResolveAssemblyReference.cache

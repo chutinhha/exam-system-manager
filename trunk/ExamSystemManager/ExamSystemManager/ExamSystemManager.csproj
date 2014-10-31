@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFE3A044-C5B2-403D-B934-66212FDC9A70}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExamSystemManager</RootNamespace>
+    <AssemblyName>ExamSystemManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Category.aspx" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\images\000044.JPG" />
+    <Content Include="Admin\images\DSCF7865.JPG" />
+    <Content Include="Admin\images\linh5.jpg" />
+    <Content Include="Admin\IMG\banner.jpg" />
+    <Content Include="Admin\IMG\bg.png" />
+    <Content Include="Admin\IMG\customer.jpg" />
+    <Content Include="Admin\IMG\employee.jpg" />
+    <Content Include="Admin\IMG\equipment.jpg" />
+    <Content Include="Admin\IMG\icons\Actions-mail-mark-task-icon.png" />
+    <Content Include="Admin\IMG\icons\add.png" />
+    <Content Include="Admin\IMG\icons\administrator.png" />
+    <Content Include="Admin\IMG\icons\arrow_left.png" />
+    <Content Include="Admin\IMG\icons\arrow_redo.png" />
+    <Content Include="Admin\IMG\icons\arrow_refresh.png" />
+    <Content Include="Admin\IMG\icons\arrow_right.png" />
+    <Content Include="Admin\IMG\icons\arrow_undo.png" />
+    <Content Include="Admin\IMG\icons\award_star_bronze_2.png" />
+    <Content Include="Admin\IMG\icons\change_password.png" />
+    <Content Include="Admin\IMG\icons\clock.png" />
+    <Content Include="Admin\IMG\icons\clock_red.png" />
+    <Content Include="Admin\IMG\icons\coins.png" />
+    <Content Include="Admin\IMG\icons\coins_in_hand.png" />
+    <Content Include="Admin\IMG\icons\cross.png" />
+    <Content Include="Admin\IMG\icons\cup-icon2.png" />
+    <Content Include="Admin\IMG\icons\delete.png" />
+    <Content Include="Admin\IMG\icons\disk.png" />
+    <Content Include="Admin\IMG\icons\error.png" />
+    <Content Include="Admin\IMG\icons\exclamation.png" />
+    <Content Include="Admin\IMG\icons\eye.png" />
+    <Content Include="Admin\IMG\icons\gagal.png" />
+    <Content Include="Admin\IMG\icons\gift-box-icon.png" />
+    <Content Include="Admin\IMG\icons\gift_add.png" />
+    <Content Include="Admin\IMG\icons\Images-icon.png" />
+    <Content Include="Admin\IMG\icons\informasi.png" />
+    <Content Include="Admin\IMG\icons\pencil.png" />
+    <Content Include="Admin\IMG\icons\pictures.png" />
+    <Content Include="Admin\IMG\icons\picture_edit.png" />
+    <Content Include="Admin\IMG\icons\picture_go.png" />
+    <Content Include="Admin\IMG\icons\search.png" />
+    <Content Include="Admin\IMG\icons\search1.png" />
+    <Content Include="Admin\IMG\icons\search2.png" />
+    <Content Include="Admin\IMG\icons\Status-image-loading-icon.png" />
+    <Content Include="Admin\IMG\icons\sukses.png" />
+    <Content Include="Admin\IMG\icons\tick.png" />
+    <Content Include="Admin\IMG\icons\User-icon.png" />
+    <Content Include="Admin\IMG\icons\user.png" />
+    <Content Include="Admin\IMG\icons\user1.png" />
+    <Content Include="Admin\IMG\Store.png" />
+    <Content Include="Admin\js\jquery-1.4.2.min.js" />
+    <Content Include="Admin\Lever.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\Type.aspx" />
+    <Content Include="Admin\User.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMasterPage.master.cs">
+      <DependentUpon>AdminMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.master.designer.cs">
+      <DependentUpon>AdminMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\js\AdminMasterPage.master.cs">
+      <DependentUpon>AdminMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Lever.aspx.cs">
+      <DependentUpon>Lever.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Lever.aspx.designer.cs">
+      <DependentUpon>Lever.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Type.aspx.cs">
+      <DependentUpon>Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Type.aspx.designer.cs">
+      <DependentUpon>Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminMasterPage.master" />
+    <None Include="Admin\IMG\icons\Thumbs.db" />
+    <Content Include="Admin\js\AdminMasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExamSystemManager.Bussiness\ExamSystemManager.Bussiness.csproj">
+      <Project>{3BA0F472-8E82-48ED-932A-C2B6A38AD639}</Project>
+      <Name>ExamSystemManager.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExamSystemManager.Data\ExamSystemManager.Data.csproj">
+      <Project>{32F48C54-F755-45EF-BDE1-194537BDDD7C}</Project>
+      <Name>ExamSystemManager.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2121</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

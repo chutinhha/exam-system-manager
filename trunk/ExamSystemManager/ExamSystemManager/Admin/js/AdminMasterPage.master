@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+    <asp:ContentPlaceHolder id=title runat="server">
+    
+    </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>	
+    <script type="text/javascript">
+        //Tai lieu da san sang
+        $(document).ready(function (e) {
+            $("#menu li").hover(function (e) {
+                //Khi di chuot vao	
+                //$("ul").fadeIn("slow");
+                $(this).find("ul:first").css({ visibility: "visible", display: "none" }).show(500);
+            }, function (e) {
+                //Khi di chuot ra
+                $(this).find("ul:first").css("visibility", "hidden");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+      <div class="banner">
+    </div>
+  <div id="menu">
+    <ul id="">
+    	<li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/admin/Default.aspx">Home</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/admin/manager.aspx">Manager</asp:HyperLink>
+        	<ul>
+				<li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/admin/employee.aspx">Employees</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/admin/customer.aspx">Customer</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/admin/store.aspx">Store</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/admin/equipment.aspx">Equipment</asp:HyperLink></li>
+			</ul>
+        </li>
+        <li><a href="#">Process</a>
+        	<ul>
+				<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/admin/order.aspx">Order</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/admin/checkEquipment.aspx">Check Equipment</asp:HyperLink></li>
+				<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/admin/checkLocal.aspx">Check Local</asp:HyperLink></li>
+			</ul>
+        </li>        
+        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="#">Statistics</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="#">Help</asp:HyperLink></li>
+    </ul>
+  </div>
+  <div class="conten">
+    	<div class="info">
+        	<table width="150px" style="margin:auto">
+            	<tr><td  style="width:200px; text-align:center;"><img src="images/DSCF7865.JPG" alt="my" width="100px" align="middle" /></td></tr>
+                	<tr><td><a href="#">Logoutt</a></td></tr>
+                    <tr><td>Philip Lahm</td></tr>
+                	<tr><td>Admin</td></tr>
+                	<tr><td>Age : 25</td></tr>
+                	<tr><td>Address : Ha Noi</td></tr>
+            </table>
+        </div>
+        <div class="container">
+            <div class="title">
+                <asp:ContentPlaceHolder id="Mesages" runat="server">
+                    Home
+                </asp:ContentPlaceHolder> 
+            </div>
+            <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </div>     
+        </div>
+    </div>
+    
+    <div class="footer">
+        <br />
+        <address>Coppyright &copy; By Philip lahm - Group 1 - C1110i - Back Khoa Aptech</address>
+    </div>
+</div>
+</body>
+</html>
